@@ -1,0 +1,27 @@
+﻿spring:
+    profiles:
+        active:
+        - dev
+---
+server:
+    port: 8006
+spring:
+    profiles: dev
+    application: 
+        name: cloudtest-config-client
+eureka:
+    client:
+        service-url: 
+            defaultZone: http://127.0.0.1:8001/eureka/
+---
+
+server:
+    port: 8007
+spring:
+    profiles: test
+    application: 
+        name: cloudtest-config-client
+eureka:
+    client:
+        service-url: 
+            defaultZone: http://127.0.0.1:8001/eureka/
